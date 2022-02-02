@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Move(int direction) {
         _targetVelocity = new Vector2(direction * _speed, _rb2d.velocity.y);
-        OnSpeedChange.Invoke(direction * _speed);
+        OnSpeedChange.Invoke(direction);
 
         if ((_renderer.flipX && direction > 0)
             || (!_renderer.flipX && direction < 0)) {
