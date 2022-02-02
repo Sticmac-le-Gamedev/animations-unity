@@ -9,4 +9,12 @@ public class PlayerAnimator : MonoBehaviour
     public void Walk(float speed) {
         _animator.SetFloat("Speed", Mathf.Abs(speed));
     }
+
+    public void Jump() {
+        _animator.SetBool("Grounded", false);
+    }
+
+    public void Ground() {
+        _animator.SetBool("Grounded", true);
+    }
 }
